@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <button id="previous">Previous</button>
+    <button id="next">Next</button>
+    <img src="https://www.worldatlas.com/r/w1200/upload/39/f1/6e/shutterstock-231369109.jpg" width="400" height="400" id="myImg1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUf_NokJPne-JTHYoGWEYfQqGNc3XnsxWmIw&usqp=CAU" width="400" height="400" id="myImg2">
+    <img src="https://tiger-corporation-us.com/wp-content/uploads/2019/08/kappa-maki-900x600.jpg" width="400" height="400" id="myImg3">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6m5mh0a5wdW2y9O9MCwmLrT1Dx__pdFVenQ&usqp=CAU" width="400" height="400" id="myImg4">
+    <img src="https://static01.nyt.com/images/2017/03/31/well/yoga-for-strength/yoga-for-strength-jumbo.jpg" width="400" height="400" id="myImg5">
+
+</body>
+<script>
+    let slideindex = 0;
+    let slides = [document.getElementById("myImg1"), document.getElementById("myImg2"), document.getElementById("myImg3"), document.getElementById("myImg4"), document.getElementById("myImg5")];
+    for (i = 0; i < 5; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[0].style.display = "";
+    let previous = document.getElementById("previous");
+    previous.addEventListener("click", () => {
+        if (slideindex == 0) {
+            slideindex = 4;
+        } else {
+            slideindex = slideindex - 1;
+        }
+        for (i = 0; i < 5; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideindex].style.display = "";
+    });
+    let next = document.getElementById("next");
+    next.addEventListener("click", () => {
+        if (slideindex == 4) {
+            slideindex = 0;
+        } else {
+            slideindex = slideindex + 1;
+        }
+        for (i = 0; i < 5; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideindex].style.display = "";
+    });
+</script>
+
+</html>

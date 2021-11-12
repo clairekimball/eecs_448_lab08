@@ -1,0 +1,26 @@
+body {
+    background-color: orange;
+    font-family: arial;
+    font-size: 22pt;
+    background-image: url(https://image.shutterstock.com/image-vector/set-pumpkins-character-cartoon-dancing-260nw-2019875789.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+p {
+    background-color: darkorange;
+    color: white;
+}
+
+a {
+    color: black;
+}
+
+a.halloween {
+    color: green
+}
+
+a:hover {
+    background-color: darkorange;
+    color: white
+}

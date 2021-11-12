@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="Exercise4.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1></h1>
+    <h2 id="h2">Border</h2>
+    Red(0-255): <input id='redborder'> Green(0-255): <input id='greenborder'> Blue(0-255): <input id='blueborder'> Width(px): <input id='width'>
+    <h2>Background color</h2>
+    Red(0-255): <input id='redbackground'> Green(0-255): <input id='greenbackground'> Blue(0-255): <input id='bluebackground'>
+    <h2></h2>
+    <button id="button">Create border and background</button>
+    <p id="paragraph">Computer Science is the study of computers and computational systems. Unlike electrical and computer engineers, computer scientists deal mostly with software and software systems; this includes their theory, design, development, and application.</p>
+    <script>
+        let button = document.getElementById("button");
+        button.addEventListener("click", () => {
+            let redborder = document.getElementById('redborder');
+            let greenborder = document.getElementById('greenborder');
+            let blueborder = document.getElementById('blueborder');
+            let str = "rgb(" + redborder.value + ", " + greenborder.value + ", " + blueborder.value + ")";
+
+            let redbackground = document.getElementById('redbackground');
+            let greenbackground = document.getElementById('greenbackground');
+            let bluebackground = document.getElementById('bluebackground');
+            let str2 = "rgb(" + redbackground.value + "," + greenbackground.value + "," + bluebackground.value + ")";
+
+            let width = document.getElementById('width');
+            let str3 = width.value + "px";
+
+            let p = document.getElementById("paragraph");
+            p.style.backgroundColor = str2;
+            p.style.borderStyle = "solid";
+            p.style.borderWidth = str3;
+            p.style.borderColor = str;
+        })
+    </script>
+</body>
+
+</html>

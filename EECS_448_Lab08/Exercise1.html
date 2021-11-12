@@ -1,0 +1,22 @@
+<html>
+
+<input type="password" id="initialpassword">
+<input type="password" id="validatepassword">
+
+<button>Validate</button>
+<script>
+    let button = document.querySelector("button");
+    button.addEventListener("click", () => {
+        let password1 = document.getElementById("initialpassword");
+        let password2 = document.getElementById("validatepassword");
+        if (password1.value.length < 8 || password2.value.length < 8) {
+            alert("ERROR: the passwords are not at least 8 characters long");
+        } else if (password1.value == password2.value) {
+            alert("Valid password");
+        } else {
+            alert("ERROR: the passwords entered don't match");
+        }
+    });
+</script>
+
+</html>
